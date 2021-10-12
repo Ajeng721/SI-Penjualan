@@ -1,10 +1,13 @@
 <?php 
 	session_start();
+	include 'db.php';
 	if ($_SESSION['status_login'] != true) {
 		echo '<script>window.location="login.php"</script>';
 	}
-?>
 
+	$query = mysqli-qu($conn, "SELECT * FROM tb_admin WHERE admin_id = '".$_SESSION['id']."' ");
+	$d = mysqli_fetch_object($query);
+?>
 <!DOCTYPE html>
 	<html>
 	<head>
@@ -33,13 +36,37 @@
 				<h3>Profil</h3>
 				<div class="box">
 					<form action="" method="POST">
-						<input type="text" name="nama" placeholder="Nama Lengkap" class="input-control" required>
-						<input type="text" name="user" placeholder="Username" class="input-control" required>
-						<input type="text" name="hp" placeholder="No. Hp" class="input-control" required>
-						<input type="email" name="email" placeholder="Email Lengkap" class="input-control" required>
-						<input type="text" name="alamat" placeholder="Alamat" class="input-control" required>
-						<input type="submit" name="submit">
+						<input type="text" name="nama" placeholder="Nama Lengkap" class="input-control" value="<?php echo $d->admin_name ?" required>
+						<input type="text" name="user" placeholder="Username" class="input-control" value="<?php echo $d->username ?" required>
+						<input type="text" name="hp" placeholder="No. Hp" class="input-control" value="<?php echo $d->admin_telp ?" required>
+						<input type="email" name="email" placeholder="Email Lengkap" class="input-control" value="<?php echo $d->admin_email ?" required>
+						<input type="text" name="alamat" placeholder="Alamat" class="input-control" value="<?php echo $d->admin_address ?" required>
+						<input type="submit" name="submit" value="Ubah Profil" class="btn">
 					</form>
+					<?php
+						if(issert($_POST['submit')){
+
+							$nama 	= $_POST['nama'];
+							$user 	= $_POST['user'];
+							$hp 	= $_POST['hp'];
+							$email 	= $_POST['email'];
+							$alamat = $_POST['alamat'];
+
+							$update = msqli_query($conn, "UPDATE tb_admin SET
+											admin_name = '".$nama."',
+											username = '".$user."',
+											admin_telp = '".$hp."',
+											admin_email= '".$email."',
+											admin_address = '".$alamat."'
+											WHERE admin_id = '".$d->admin_id.'" ");
+							if($update){
+								echo'berhasil';
+							}else{
+								echo'gagal '.mysqli_error($conn);
+							}
+
+						}
+					?>
 				</div>
 			</div>
 		</div>
