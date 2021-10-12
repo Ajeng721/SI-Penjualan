@@ -34,6 +34,11 @@
 				<div class="box">
 					<form action="" method="POST">
 						<input type="text" name="nama" placeholder="Nama Lengkap" class="input-control" required>
+						<input type="text" name="user" placeholder="Username" class="input-control" required>
+						<input type="text" name="hp" placeholder="No. Hp" class="input-control" required>
+						<input type="email" name="email" placeholder="Email Lengkap" class="input-control" required>
+						<input type="text" name="alamat" placeholder="Alamat" class="input-control" required>
+						<input type="submit" name="submit">
 					</form>
 				</div>
 			</div>
