@@ -36,11 +36,13 @@
 				<h3>Profil</h3>
 				<div class="box">
 					<form action="" method="POST">
-						<input type="text" name="nama" placeholder="Nama Lengkap" class="input-control" value="<?php echo $d->admin_name ?" required>
-						<input type="text" name="user" placeholder="Username" class="input-control" value="<?php echo $d->username ?" required>
-						<input type="text" name="hp" placeholder="No. Hp" class="input-control" value="<?php echo $d->admin_telp ?" required>
-						<input type="email" name="email" placeholder="Email Lengkap" class="input-control" value="<?php echo $d->admin_email ?" required>
-						<input type="text" name="alamat" placeholder="Alamat" class="input-control" value="<?php echo $d->admin_address ?" required>
+						<input type="text" name="nama" placeholder="Nama Lengkap" class="input-control" value="<?php echo $d->id_admin ?" required>
+						<input type="text" name="nama" placeholder="Nama Lengkap" class="input-control" value="<?php echo $d->nama_admin ?" required>
+						<input type="text" name="user" placeholder="Username" class="input-control" value="<?php echo $d->adm_username ?" required>
+						<input type="text" name="hp" placeholder="No. Hp" class="input-control" value="<?php echo $d->adm_password ?" required>
+						<input type="email" name="email" placeholder="Email Lengkap" class="input-control" value="<?php echo $d->adm_telp ?" required>
+						<input type="email" name="email" placeholder="Email Lengkap" class="input-control" value="<?php echo $d->adm_email ?" required>
+						<input type="text" name="alamat" placeholder="Alamat" class="input-control" value="<?php echo $d->adm_alamat ?" required>
 						<input type="submit" name="submit" value="Ubah Profil" class="btn">
 					</form>
 					<?php
