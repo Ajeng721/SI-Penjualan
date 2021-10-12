@@ -48,19 +48,23 @@
 					<?php
 						if(issert($_POST['submit')){
 
-							$nama 	= $_POST['nama'];
-							$user 	= $_POST['user'];
-							$hp 	= $_POST['hp'];
-							$email 	= $_POST['email'];
-							$alamat = $_POST['alamat'];
+							$id_admin 		= $_POST['id admin'];
+							$nama_admin 	= $_POST['nama admin'];
+							$adm_username 	= $_POST['Username'];
+							$adm_password 	= $_POST['Password'];
+							$adm_telp 		= $_POST['Telepon'];
+							$adm_email 		= $_POST['Email'];
+							$adm_alamat 	= $_POST['alamat'];
 
 							$update = msqli_query($conn, "UPDATE tb_admin SET
-											admin_name = '".$nama."',
-											username = '".$user."',
-											admin_telp = '".$hp."',
-											admin_email= '".$email."',
-											admin_address = '".$alamat."'
-											WHERE admin_id = '".$d->admin_id.'" ");
+											id_admin	= '".$id_admin."'
+											nama_admin = '".$nama_admin."',
+											adm_username = '".$adm_username."',
+											adm_password = '".$adm_paswword."',
+											adm_telp= '".$adm_telp."',
+											adm_email= '".$adm_email."',
+											adm_alamat = '".$adm_alamat."'
+											WHERE id_admin = '".$d->id_admin.'" ");
 							if($update){
 								echo'berhasil';
 							}else{
