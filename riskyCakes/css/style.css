@@ -60,6 +60,9 @@ header ul li a{
 header ul{
 	float: right;
 }
+footer {
+	padding: 25px 0;
+}
 a{
 	color: white;
 	text-decoration: none;
@@ -82,7 +85,7 @@ a{
 	border: 1px solid #ccc;
 	padding: 15px;
 	box-sizing: border-box;
-	margin: 10px 0;
+	margin: 10px 0 25px 0;
 }
 h3{
 	color: black;
