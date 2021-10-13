@@ -37,7 +37,7 @@
                             <tr>
                                 <th>No</th>
                                 <th>Kategori</th>
-                                <th>Aks</th>
+                                <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
