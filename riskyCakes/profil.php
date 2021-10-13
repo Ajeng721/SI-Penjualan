@@ -1,4 +1,4 @@
-<?php 
+<?php
 	session_start();
 	include 'db.php';
 	if ($_SESSION['status_login'] != true) {
@@ -16,7 +16,7 @@
 		<title>Rizky Cake's</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
-		
+
 	</head>
 	<body>
 		<header>
@@ -36,7 +36,11 @@
 				<h3>Profil</h3>
 				<div class="box">
 					<form action="" method="POST">
+<<<<<<< HEAD
 						<input type="text" name="nama" placeholder="id admin" class="input-control" value="<?php echo $d->id_admin ?" required>
+=======
+						<input type="text" name="id" placeholder="Id Admin" class="input-control" value="<?php echo $d->id_admin ?" required>
+>>>>>>> b2b51684afdeb09af380830403a426de088ef9f5
 						<input type="text" name="nama" placeholder="Nama Lengkap" class="input-control" value="<?php echo $d->nama_admin ?" required>
 						<input type="text" name="user" placeholder="Username" class="input-control" value="<?php echo $d->adm_username ?" required>
 						<input type="text" name="password" placeholder="Password" class="input-control" value="<?php echo $d->adm_password ?" required>
@@ -112,9 +116,9 @@
 		<foater>
 			<div class="container">
 				<small>Copyright &copy; 2021 -  Risky Cake's.</small>
-				
+
 			</div>
 
-	
+
 	</body>
 	</html>
