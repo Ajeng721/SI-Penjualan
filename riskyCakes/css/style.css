@@ -100,3 +100,13 @@ footer{
 	padding: 15px 0;
 
 }
+.table{
+	width: 100x;
+	border-collapse: collapse;
+}
+.table tr{
+	height: 30px;
+}
+.table tr td{
+padding: 5px 10 px;
+}
