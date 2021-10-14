@@ -50,7 +50,7 @@
 							?>
                             <tr>
                                 <td>1</td>
-                                <td>xxx</td>
+                                <td><?php echo $row['nama_kategori']></td>
                                 <td>
                                      <a href ="">Edit</a> || <a href ="">Hapus</a> 
                                 </td>
