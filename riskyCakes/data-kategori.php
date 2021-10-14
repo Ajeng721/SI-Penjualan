@@ -1,6 +1,6 @@
   <?php 
 	session_start();
-	include 'db.php';
+	include_once("config.php");
 	if ($_SESSION['status_login'] != true) {
 		echo '<script>window.location="login.php"</script>';
 	}
@@ -24,7 +24,7 @@
 				<li><a href="dashboard.php">Dashboard</a></li>
 				<li><a href="profil.php">Profil</a></li>
 				<li><a href="data-kategori.php">Data Kategori</a></li>
-				<li><a href="data-produk.php"</a>Data Kue dan Harga</li>
+				<li><a href="data-produk.php"</a>Data Kue</li>
 				<li><a href="keluar.php"</a>Keluar</li>
 			</ul>
 			</div>
@@ -43,21 +43,20 @@
                         </thead>
                         <tbody>
 							<?php
+							$no = 1;
 							$kategori =mysqli_query($conn, "SELECT * FROM tb_kategori ORDER BY  id_kategori DESC");
 							while($row = mysqli_fetch_array(kategori)){
-
-							
 							?>
                             <tr>
-                                <td>1</td>
+                                <td><?php echo $no++?></td>
                                 <td><?php echo $row['nama_kategori'] ?></td>
                                 <td>
                                      <a href ="">Edit</a> || <a href ="">Hapus</a> 
                                 </td>
                             </tr>
 							<?php } ?>
-                        </tbody>
-                    </table>
+                        </tbody> 
+                    </table> 
 				</div>
 			</div>
 		</div>
