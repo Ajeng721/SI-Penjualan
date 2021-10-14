@@ -1,5 +1,6 @@
-<?php 
+  <?php 
 	session_start();
+	include 'dc.php';
 	if ($_SESSION['status_login'] != true) {
 		echo '<script>window.location="login.php"</script>';
 	}
@@ -30,7 +31,7 @@
 		</header>
 		<div class="section">
 			<div class="container">
-				<h3>Dashboard</h3>
+				<h3>Data Kategori</h3>
 				<div class="box">
 					<table border="1" cellspacing="0" class="table">
                         <thead>
@@ -38,9 +39,15 @@
                                 <th>No</th>
                                 <th>Kategori</th>
                                 <th>Aksi</th>
-                            </tr>
+							 </tr>
                         </thead>
                         <tbody>
+							<?php
+							$kategori =mysqli_query($conn, "SELECT * FROM tb_kategori ORDER BY  id_kategori DESC");
+							while($row = mysqli_fetch_array(kategori)){
+
+							
+							?>
                             <tr>
                                 <td>1</td>
                                 <td>xxx</td>
@@ -48,6 +55,7 @@
                                      <a href ="">Edit</a> || <a href ="">Hapus</a> 
                                 </td>
                             </tr>
+							<?php}?>
                         </tbody>
                     </table>
 				</div>
