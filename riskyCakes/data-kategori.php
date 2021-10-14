@@ -1,6 +1,6 @@
   <?php 
 	session_start();
-	include 'dc.php';
+	include 'db.php';
 	if ($_SESSION['status_login'] != true) {
 		echo '<script>window.location="login.php"</script>';
 	}
@@ -55,7 +55,7 @@
                                      <a href ="">Edit</a> || <a href ="">Hapus</a> 
                                 </td>
                             </tr>
-							<?php}?>
+							<?php } ?>
                         </tbody>
                     </table>
 				</div>
@@ -66,7 +66,5 @@
 				<small>Copyright &copy; 2021 -  Risky Cake's.</small>
 				
 			</div>
-
-	
 	</body>
 	</html>
