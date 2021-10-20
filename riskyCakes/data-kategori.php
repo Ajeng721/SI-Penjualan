@@ -1,6 +1,6 @@
   <?php 
 	session_start();
-	include_once("config.php");
+	include 'index.php';
 	if ($_SESSION['status_login'] != true) {
 		echo '<script>window.location="login.php"</script>';
 	}
@@ -24,8 +24,8 @@
 				<li><a href="dashboard.php">Dashboard</a></li>
 				<li><a href="profil.php">Profil</a></li>
 				<li><a href="data-kategori.php">Data Kategori</a></li>
-				<li><a href="data-produk.php"</a>Data Kue</li>
-				<li><a href="keluar.php"</a>Keluar</li>
+				<li><a href="data-produk.php">Data Kue</a></li>
+				<li><a href="keluar.php">Keluar</a></li>
 			</ul>
 			</div>
 		</header>
@@ -33,6 +33,7 @@
 			<div class="container">
 				<h3>Data Kategori</h3>
 				<div class="box">
+					<p><a href="tambah-kategori.php">Tambah Data</a><p> 
 					<table border="1" cellspacing="0" class="table">
                         <thead>
                             <tr>
@@ -45,19 +46,19 @@
 							<?php
 							$no = 1;
 							$kategori =mysqli_query($conn, "SELECT * FROM tb_kategori ORDER BY  id_kategori DESC");
-							while($row = mysqli_fetch_array(kategori)){
+							while($row = mysqli_fetch_array($kategori)){
 							?>
                             <tr>
                                 <td><?php echo $no++?></td>
                                 <td><?php echo $row['nama_kategori'] ?></td>
                                 <td>
-                                     <a href ="">Edit</a> || <a href ="">Hapus</a> 
+                                     <a href ="edit-data.php?id=<?php echo $row['id_kategori'] ?>" >Edit</a> || <a href ="proses-hapus.php?idk=<?php echo $row['id_kategori'] ?>" >hapus</a> 
                                 </td>
                             </tr>
 							<?php } ?>
                         </tbody> 
                     </table> 
-				</div>
+				</div> 
 			</div>
 		</div>
 		<foater>
