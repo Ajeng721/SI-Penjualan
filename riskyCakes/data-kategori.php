@@ -1,4 +1,4 @@
-  <?php 
+  <?php
 	session_start();
 	include 'index.php';
 	if ($_SESSION['status_login'] != true) {
@@ -14,7 +14,7 @@
 		<title>Rizky Cake's</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
-		
+
 	</head>
 	<body>
 		<header>
@@ -33,7 +33,7 @@
 			<div class="container">
 				<h3>Data Kategori</h3>
 				<div class="box">
-					<p><a href="tambah-kategori.php">Tambah Data</a><p> 
+					<p><a href="tambah-kategori.php">Tambah Data</a><p>
 					<table border="1" cellspacing="0" class="table">
                         <thead>
                             <tr>
@@ -52,19 +52,19 @@
                                 <td class= "center"><?php echo $no++?></td>
                                 <td><?php echo $row['nama_kategori'] ?></td>
                                 <td>
-                                     <a href ="edit-data.php?id=<?php echo $row['id_kategori'] ?>" >Edit</a> || <a href ="proses-hapus.php?idk=<?php echo $row['id_kategori'] ?>" >hapus</a> 
+                                     <a href ="edit-data.php?id=<?php echo $row['id_kategori']?>">Edit</a> || <a href ="proses-hapus.php?idk=<?php echo $row['id_kategori'] ?>">hapus</a> 
                                 </td>
                             </tr>
 							<?php } ?>
-                        </tbody> 
-                    </table> 
-				</div> 
+                        </tbody>
+                    </table>
+				</div>
 			</div>
 		</div>
 		<foater>
 			<div class="container">
 				<small>Copyright &copy; 2021 -  Risky Cake's.</small>
-				
+
 			</div>
 	</body>
 	</html>
