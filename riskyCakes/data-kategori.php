@@ -1,6 +1,12 @@
+<<<<<<< Updated upstream
   <?php
 	session_start();
 	include 'index.php';
+=======
+  <?php 
+	session_start();		
+	include_once("index.php");
+>>>>>>> Stashed changes
 	if ($_SESSION['status_login'] != true) {
 		echo '<script>window.location="login.php"</script>';
 	}
