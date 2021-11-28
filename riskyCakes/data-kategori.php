@@ -26,8 +26,6 @@
 				<li><a href="dashboard.php">Dashboard</a></li>
 				<li><a href="profil.php">Profil</a></li>
 				<li><a href="data-kategori.php">Data Kategori</a></li>
-				<li><a href="data-produk.php">Data Kue</a></li>
-				<li><a href="keluar.php">Keluar</a></li>
 				<li><a href="data-produk.php"</a>Data Kue </li>
 				<li><a href="keluar.php"</a>Keluar</li>
 
