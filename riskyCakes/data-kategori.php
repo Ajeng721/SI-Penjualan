@@ -24,8 +24,13 @@
 				<li><a href="dashboard.php">Dashboard</a></li>
 				<li><a href="profil.php">Profil</a></li>
 				<li><a href="data-kategori.php">Data Kategori</a></li>
+<<<<<<< Updated upstream
 				<li><a href="data-produk.php">Data Kue</a></li>
 				<li><a href="keluar.php">Keluar</a></li>
+=======
+				<li><a href="data-produk.php"</a>Data Kue </li>
+				<li><a href="keluar.php"</a>Keluar</li>
+>>>>>>> Stashed changes
 			</ul>
 			</div>
 		</header>
@@ -36,11 +41,15 @@
 					<p><a href="tambah-kategori.php">Tambah Data</a><p>
 					<table border="1" cellspacing="0" class="table">
                         <thead>
-                            <tr>
+                          
                                 <th>No</th>
                                 <th>Kategori</th>
                                 <th>Aksi</th>
+<<<<<<< Updated upstream
 							 </tr>
+=======
+                            
+>>>>>>> Stashed changes
                         </thead>
                         <tbody>
 							<?php
