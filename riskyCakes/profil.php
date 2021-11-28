@@ -73,7 +73,7 @@
 								echo '<script>alert("Ubah data berhasil")</script>';
 								echo '<script>window.location=profil.php</script>';
 							}else{
-								echo'gagal '.mysqli_error($conn);
+								echo'gagal'.mysqli_error($conn);
 							}
 
 						}
