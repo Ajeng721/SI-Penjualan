@@ -64,8 +64,9 @@ footer {
 	padding: 25px 0;
 }
 a{
-	color: white;
+	color:black;
 	text-decoration: none;
+	
 }
 .container{
 	width: 80%;
@@ -81,7 +82,7 @@ a{
 	border: 1px solid;
 }
 .box{
-	background-color: #fff;
+	background-color: black;
 	border: 1px solid #ccc;
 	padding: 15px;
 	box-sizing: border-box;
@@ -110,4 +111,9 @@ footer{
 .table tr td{
 padding: 5px 10px;
 }
+.center{
+	align-items: center;
+	justify-content: center;
+}
+
  

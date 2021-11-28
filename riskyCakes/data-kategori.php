@@ -48,8 +48,8 @@
 							$kategori =mysqli_query($conn, "SELECT * FROM tb_kategori ORDER BY  id_kategori DESC");
 							while($row = mysqli_fetch_array($kategori)){
 							?>
-                            <tr>
-                                <td><?php echo $no++?></td>
+                            <tr class= "center">
+                                <td class= "center"><?php echo $no++?></td>
                                 <td><?php echo $row['nama_kategori'] ?></td>
                                 <td>
                                      <a href ="edit-data.php?id=<?php echo $row['id_kategori'] ?>" >Edit</a> || <a href ="proses-hapus.php?idk=<?php echo $row['id_kategori'] ?>" >hapus</a> 

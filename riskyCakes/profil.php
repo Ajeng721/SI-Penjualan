@@ -1,11 +1,11 @@
 <?php
 	session_start();
-	include 'db.php';
+	include 'index.php';
 	if ($_SESSION['status_login'] != true) {
 		echo '<script>window.location="login.php"</script>';
 	}
 
-	$query = mysqli-qu($conn, "SELECT * FROM tb_admin WHERE admin_id = '".$_SESSION['id']."' ");
+	$query = mysqli-qu($conn, "SELECT * FROM tb_admin WHERE id_admin = '".$_SESSION['id']."' ");
 	$d = mysqli_fetch_object($query);
 ?>
 <!DOCTYPE html>
@@ -36,42 +36,33 @@
 				<h3>Profil</h3>
 				<div class="box">
 					<form action="" method="POST">
-<<<<<<< HEAD
-						<input type="text" name="nama" placeholder="id admin" class="input-control" value="<?php echo $d->id_admin ?" required>
-=======
-						<input type="text" name="id" placeholder="Id Admin" class="input-control" value="<?php echo $d->id_admin ?" required>
->>>>>>> b2b51684afdeb09af380830403a426de088ef9f5
-						<input type="text" name="nama" placeholder="Nama Lengkap" class="input-control" value="<?php echo $d->nama_admin ?" required>
-						<input type="text" name="user" placeholder="Username" class="input-control" value="<?php echo $d->adm_username ?" required>
-						<input type="text" name="password" placeholder="Password" class="input-control" value="<?php echo $d->adm_password ?" required>
-						<input type="Telepon" name="Telepon" placeholder="No. Hp" class="input-control" value="<?php echo $d->adm_telp ?" required>
-						<input type="email" name="email" placeholder="Email Lengkap" class="input-control" value="<?php echo $d->adm_email ?" required>
-						<input type="text" name="alamat" placeholder="Alamat" class="input-control" value="<?php echo $d->adm_alamat ?" required>
+						<input type="text" name="nama" placeholder="Nama Lengkap" class="input-control" value="<?php echo $d->nama_admin ?>" required>
+						<input type="text" name="user" placeholder="Username" class="input-control" value="<?php echo $d->adm_username ?>" required>
+						<input type="Telepon" name="Telepon" placeholder="No. Hp" class="input-control" value="<?php echo $d->adm_telp ?>" required>
+						<input type="email" name="email" placeholder="Email Lengkap" class="input-control" value="<?php echo $d->adm_email ?>" required>
+						<input type="text" name="alamat" placeholder="Alamat" class="input-control" value="<?php echo $d->adm_alamat ?>" required>
 						<input type="submit" name="submit" value="Ubah Profil" class="btn">
 					</form>
 					<?php
-						if(issert($_POST['submit')){
+						if(isset($_POST['submit'])){
 
-							$id_admin 		= $_POST['id admin'];
-							$nama_admin 	= ucwords($_POST['nama admin']);
-							$adm_username 	= $_POST['Username'];
-							$adm_password 	= $_POST['Password'];
-							$adm_telp 		= $_POST['Telepon'];
-							$adm_email 		= $_POST['Email'];
-							$adm_alamat 	= ucwords($_POST['alamat']);
+							$nama 		= ucwords($_POST['nama admin']);
+							$user 		= $_POST['Username'];
+							$hp 		= $_POST['hp'];
+							$email 		= $_POST['Email'];
+							$alamat 	= ucwords($_POST['alamat']);
 
 							$update = msqli_query($conn, "UPDATE tb_admin SET
-											id_admin	= '".$id_admin."'
-											nama_admin = '".$nama_admin."',
-											adm_username = '".$adm_username."',
-											adm_password = '".$adm_paswword."',
-											adm_telp= '".$adm_telp."',
-											adm_email= '".$adm_email."',
-											adm_alamat = '".$adm_alamat."'
-											WHERE id_admin = '".$d->id_admin.'" ");
+											
+											admin_name = '".$nama."',
+											username = '".$user."',
+											admin_telp= '".$hp."',
+											admin_email= '".$email."',
+											admin _alamat = '".$alamat."'
+											WHERE admin_id = '".$d->id_admin.'" ");
 							if($update){
 								echo '<script>alert("Ubah data berhasil")</script>';
-								echo '<script>window.location=profil.php</script>';
+								echo '<script>window.location="profil.php"</script>';
 							}else{
 								echo'gagal '.mysqli_error($conn);
 							}
